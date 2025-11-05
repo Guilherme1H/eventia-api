@@ -1,0 +1,73 @@
+[2025-10-29 21:56:09] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 21:56:09] !!! ERRO CRÍTICO: Conexão com o banco de dados falhou. Mensagem: SQLSTATE[HY000] [1049] Unknown database 'eventia'
+[2025-10-29 21:56:16] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 21:56:16] !!! ERRO CRÍTICO: Conexão com o banco de dados falhou. Mensagem: SQLSTATE[HY000] [1049] Unknown database 'eventia'
+[2025-10-29 21:56:21] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 21:56:21] !!! ERRO CRÍTICO: Conexão com o banco de dados falhou. Mensagem: SQLSTATE[HY000] [1049] Unknown database 'eventia'
+[2025-10-29 22:01:26] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 22:01:26] SUCESSO: Conexão com o banco de dados 'eventia_db' estabelecida.
+[2025-10-29 22:01:26] DADOS BRUTOS recebidos do App: {"email":"gui@gmail.com","name":"Gui","password":"12345678"}
+[2025-10-29 22:01:27] Dados decodificados para Array PHP: Array
+(
+    [email] => gui@gmail.com
+    [name] => Gui
+    [password] => 12345678
+)
+
+[2025-10-29 22:01:27] SUCESSO: Campos 'name', 'email' e 'password' foram encontrados.
+[2025-10-29 22:01:27] Verificando se o email 'gui@gmail.com' já existe...
+[2025-10-29 22:01:27] !!! ERRO CRÍTICO: Ocorreu uma exceção do PDO. Mensagem: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'eventia_db.usuarios' doesn't exist
+[2025-10-29 22:01:33] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 22:01:33] SUCESSO: Conexão com o banco de dados 'eventia_db' estabelecida.
+[2025-10-29 22:01:33] DADOS BRUTOS recebidos do App: {"email":"gui@gmail.com","name":"Gui","password":"12345678"}
+[2025-10-29 22:01:33] Dados decodificados para Array PHP: Array
+(
+    [email] => gui@gmail.com
+    [name] => Gui
+    [password] => 12345678
+)
+
+[2025-10-29 22:01:33] SUCESSO: Campos 'name', 'email' e 'password' foram encontrados.
+[2025-10-29 22:01:33] Verificando se o email 'gui@gmail.com' já existe...
+[2025-10-29 22:01:33] !!! ERRO CRÍTICO: Ocorreu uma exceção do PDO. Mensagem: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'eventia_db.usuarios' doesn't exist
+[2025-10-29 22:06:48] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 22:06:48] SUCESSO: Conexão com o banco de dados 'eventia_db' estabelecida.
+[2025-10-29 22:06:48] DADOS BRUTOS recebidos do App: {"email":"gui@gmail.com","name":"Gui","password":"12345678"}
+[2025-10-29 22:06:48] Dados decodificados para Array PHP: Array
+(
+    [email] => gui@gmail.com
+    [name] => Gui
+    [password] => 12345678
+)
+
+[2025-10-29 22:06:48] SUCESSO: Campos 'name', 'email' e 'password' foram encontrados.
+[2025-10-29 22:06:48] Verificando se o email 'gui@gmail.com' já existe...
+[2025-10-29 22:06:49] AVISO: O email 'gui@gmail.com' já está cadastrado. Abortando.
+[2025-10-29 22:10:11] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 22:10:11] SUCESSO: Conexão com o banco de dados 'eventia_db' estabelecida.
+[2025-10-29 22:10:11] DADOS BRUTOS recebidos do App: {"email":"eu@gmail.com","name":"Gui","password":"12345678"}
+[2025-10-29 22:10:11] Dados decodificados para Array PHP: Array
+(
+    [email] => eu@gmail.com
+    [name] => Gui
+    [password] => 12345678
+)
+
+[2025-10-29 22:10:11] SUCESSO: Campos 'name', 'email' e 'password' foram encontrados.
+[2025-10-29 22:10:11] Verificando se o email 'eu@gmail.com' já existe...
+[2025-10-29 22:10:11] SUCESSO: O email 'eu@gmail.com' está livre. Tentando inserir no banco...
+[2025-10-29 22:10:11] !!! ERRO CRÍTICO: Ocorreu uma exceção do PDO. Mensagem: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'field list'
+[2025-10-29 22:10:16] --- [CADASTRO] Nova requisição recebida ---
+[2025-10-29 22:10:16] SUCESSO: Conexão com o banco de dados 'eventia_db' estabelecida.
+[2025-10-29 22:10:16] DADOS BRUTOS recebidos do App: {"email":"eu@gmail.com","name":"Gui","password":"12345678"}
+[2025-10-29 22:10:16] Dados decodificados para Array PHP: Array
+(
+    [email] => eu@gmail.com
+    [name] => Gui
+    [password] => 12345678
+)
+
+[2025-10-29 22:10:16] SUCESSO: Campos 'name', 'email' e 'password' foram encontrados.
+[2025-10-29 22:10:16] Verificando se o email 'eu@gmail.com' já existe...
+[2025-10-29 22:10:16] SUCESSO: O email 'eu@gmail.com' está livre. Tentando inserir no banco...
+[2025-10-29 22:10:16] !!! ERRO CRÍTICO: Ocorreu uma exceção do PDO. Mensagem: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'nome' in 'field list'
