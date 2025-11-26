@@ -2,7 +2,7 @@
 header("Content-Type: application/json; charset=UTF-8");
 include 'db.php';
 
-$sql = "SELECT id, nome, data, local, preco, descricao, imagem_url AS imagemUrl, id_usuario FROM eventos";
+$sql = "SELECT id, nome, data, local, preco, descricao, imagem_url AS imagemUrl, id_usuario, categoria FROM eventos";
 $result = $conn->query($sql);
 
 $eventos = array();
