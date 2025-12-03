@@ -9,6 +9,7 @@ $preco = $_POST['preco'] ?? '';
 $descricao = $_POST['descricao'] ?? '';
 $imagem_url = $_POST['imagem_url'] ?? '';
 $id_usuario = isset($_POST['id_usuario']) ? (int)$_POST['id_usuario'] : 0;
+$categoria = $_POST['categoria'] ?? 'Outros'; // NOVO: Campo Categoria
 
 if (empty($nome) || empty($data) || empty($local) || $id_usuario == 0) {
     echo json_encode(['success' => false, 'message' => 'Campos obrigatórios ausentes.']);
@@ -19,25 +20,25 @@ $data_mysql = '';
 try {
     $date_obj = DateTime::createFromFormat('d/m/Y H:i', $data);
     if ($date_obj) {
-        $data_mysql = $date_obj->format('Y-m-d H:i:s');
-    } else {
-        echo json_encode(['success' => false, 'message' => 'Formato de data inválido.']);
-        exit;
+    $data_mysql = $date_obj->format('Y-m-d H:i:s');
+     } else {
+     echo json_encode(['success' => false, 'message' => 'Formato de data inválido.']);
+    exit;
     }
 } catch (Exception $e) {
     echo json_encode(['success' => false, 'message' => 'Erro ao processar a data.']);
     exit;
 }
 
-$sql = "INSERT INTO eventos (nome, data, local, preco, descricao, imagem_url, id_usuario) VALUES (?, ?, ?, ?, ?, ?, ?)";
+$sql = "INSERT INTO eventos (nome, data, local, preco, descricao, imagem_url, id_usuario, categoria) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
-if ($stmt === false) {
+    if ($stmt === false) {
     echo json_encode(['success' => false, 'message' => 'Erro ao preparar a query: ' . $conn->error]);
     exit;
 }
 
-$stmt->bind_param("ssssssi", $nome, $data_mysql, $local, $preco, $descricao, $imagem_url, $id_usuario);
+$stmt->bind_param("ssssssis", $nome, $data_mysql, $local, $preco, $descricao, $imagem_url, $id_usuario, $categoria);
 
 if ($stmt->execute()) {
     echo json_encode(['success' => true, 'message' => 'Evento criado com sucesso!']);
@@ -47,4 +48,3 @@ if ($stmt->execute()) {
 
 $stmt->close();
 $conn->close();
-?>

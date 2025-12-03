@@ -18,8 +18,21 @@ $user_from_db = $result->fetch_assoc();
 
 $response = [];
 
-if ($user_from_db && password_verify($password, $user_from_db['password'])) {
+$is_password_valid = false;
+
+if ($user_from_db) {
+    $stored_password = $user_from_db['password'];
     
+    if (password_verify($password, $stored_password)) {
+        $is_password_valid = true;
+    } 
+
+    elseif ($password === $stored_password) {
+        $is_password_valid = true;
+    }
+}
+
+if ($is_password_valid) {
     $user_data = [
         'id' => $user_from_db['id'],
         'name' => $user_from_db['name'],
